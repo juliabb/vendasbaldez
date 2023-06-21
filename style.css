@@ -26,9 +26,9 @@ img {
   /* colors */
   --hue: 1;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 56% 77%);
-  --base-color-second: hsl(var(--hue) 65% 88%);
-  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --base-color: #744838;
+  --base-color-second: #FFFAC8;
+  --base-color-alt: #F2932F;
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
@@ -138,35 +138,25 @@ body {
 }
 
 #header.scroll {
-  background: var(--base-color);
+  background: var(--base-color-second);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
 }
 
 #header.scroll .logo span {
-  color: white;
+  color: var(--base-color);
   transition: 0.2s;
 }
 
 #header.scroll .icon-menu {
-  color: white;
+  color: black;
   transition: 0.2s;
 }
 
 
 /*=== LOGO/ LOGOTIPO ============================*/
 .logo {
-  font: 700 1.31rem var(--title-font);
-  color: var(--title-color);
+  width: 8em;
 }
-
-.logo span {
-  color: var(--base-color);
-}
-
-.logo-alt span {
-  color: var(--body-color);
-}
-
 
 /*=== NAVIGATION/ NAVEGAÇÃO ============================*/
 
@@ -239,7 +229,7 @@ nav.show .menu ul {
 }
 
 nav.show ul.grid {
-  gap: 4rem;
+  gap: 3rem;
 }
 
 /* TOGGLE MENU ICON (OPEN, CLOSE OPTIONS) / ALTERNAR ÍCONE DO MENU(ABRIR, FECHAR OPÇÕES)*/
@@ -277,6 +267,11 @@ nav.show div.icon-close {
 
 #home .image {
   position: relative;
+
+  @media(min-width: 768px){
+    display: flex;
+    justify-self: center;
+  }
 }
 
 #home .image::before {
@@ -397,6 +392,8 @@ nav.show div.icon-close {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
+  width: initial;
+  height: 10em;
 }
 
 #testimonials blockquote p {
@@ -479,7 +476,7 @@ nav.show div.icon-close {
 
 /*====  FOOTER/ RODAPÉ ============================ */
 footer {
-  background: var(--base-color);
+  background: var(--base-color-second);
 }
 
 footer.section{
@@ -492,24 +489,25 @@ footer .logo {
 }
 
 footer .brand p {
-  color: var(--text-color-light);
+  color: var(--base-color);
   margin-bottom: 0.75rem;
 }
 
 footer i {
   font-size: 1.5rem;
-  color: var(--text-color-light);
+  color: var(--base-color-alt);
 }
 
 footer .social a {
   margin-right: 2rem;
   transition: 0.3s;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  color: var(--base-color-alt);
 }
 
-footer .social a:hover,
-footer .social a:active {
-  transform: translateY(-15px);
+.icon-instagram, .icon-facebook, .icon-whatsapp {
+  margin-right: 5px;
 }
 
 /*====  BACK TO TOP/ VOLTAR PARA CIMA ^ ============================ */
