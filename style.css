@@ -510,6 +510,10 @@ footer .social a {
   margin-right: 5px;
 }
 
+.link-created{
+  color: var(--base-color-alt);
+}
+
 /*====  BACK TO TOP/ VOLTAR PARA CIMA ^ ============================ */
 .back-to-top {
   background: var(--base-color);
