@@ -55,27 +55,27 @@ const swiper = new Swiper('.swiper', {
 });
 
 /* ScrollReveal: Show elements when scrolling page/ ScrollReveal: Mostrar elementos quando der scroll na página */
-const scrollReveal = ScrollReveal({
-  origin: 'top',
-  distance: '30px',
-  duration: 700,
-  reset: true
-})
+// const scrollReveal = ScrollReveal({
+//   origin: 'top',
+//   distance: '30px',
+//   duration: 700,
+//   reset: true
+// })
 
-scrollReveal.reveal(
-  `#home .image, #home .text,
-  #cheeses .image, #cheeses .text,
-  #candy .image, #candy .text,
-  #miscellaneous .image, #miscellaneous .text,
-  #frozen .image, #frozen .text,
-  #drinks .image, #drinks .text,
-  #services header, #services .card,
-  #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links,
-  footer .brand, footer .social
-  `,
-  { interval: 100 }
-)
+// scrollReveal.reveal(
+//   `#home .image, #home .text,
+//   #cheeses .image, #cheeses .text,
+//   #candy .image, #candy .text,
+//   #miscellaneous .image, #miscellaneous .text,
+//   #frozen .image, #frozen .text,
+//   #drinks .image, #drinks .text,
+//   #services header, #services .card,
+//   #testimonials header, #testimonials .testimonials
+//   #contact .text, #contact .links,
+//   footer .brand, footer .social
+//   `,
+//   { interval: 200 }
+// )
 
 /* BACK TO TOP/ VOLTAR AO TOPO - SETA*/
 const backToTopButton = document.querySelector('.back-to-top') //procurar no css o botão
