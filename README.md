@@ -25,7 +25,7 @@ Para acessar [Clique aqui](https://juliabb.github.io/vendasbaldez/)
 
 **Front-end:** HTML, CSS, JavaScript
 
-**Bibliotecas** Google Fonts, SwipeJS, ScrollRevel
+**Bibliotecas** Google Fonts, SwipeJS
 
 
 
