@@ -178,14 +178,14 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a:active{
-  color: var(--base-color-second);
+  color: var(--base-color-alt);
 }
 
 nav ul li a::after {
   content: '';
   width: 0%;
   height: 2px;
-  background: var(--title-color);
+  background: var(--base-color-alt);
 
   position: absolute;
   left: 0;
@@ -499,7 +499,7 @@ footer i {
 }
 
 footer .social a {
-  margin-right: 2rem;
+  margin: 10px 2rem 0 auto;
   transition: 0.3s;
   display: inline-flex;
   align-items: center;
