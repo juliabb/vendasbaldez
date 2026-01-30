@@ -2,412 +2,661 @@
 <html lang="pt-br">
 
 <head>
-  <!-- PAGE INFORMATION/ INFORMAÇÕES DA PÁGINA-->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vendas Baldez</title>
-  <!-- SOURCES OF ICONS/ FONTES DE ÍCONES-->
-  <link rel="stylesheet" href="assets/fonts/style.css" />
-
-  <!--SWIPER/ CARROSSEL-->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!--FAVICON-->
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-  <!--CSS STYLE/ ESTILO CSS-->
-  <link rel="stylesheet" href="style.css" />
-
-  <!--FFONTS Roboto and Open Sans/ FONTES Roboto e Open Sans-->
+  <title>Vendas Baldez - O melhor de Minas Gerais em São Paulo</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/cheese.png" type="image/x-icon" />
+  
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- HEADER/ CABEÇALHO-->
+  <!-- HEADER -->
   <header id="header">
     <nav class="container">
-      <!--LOGO/ LOGOTIPO-->
-      <a href="#" class="logo">
-        <img class="logo" src="./img/LOGOS-VENDAS.png" alt="Logo Vendas Baldez">
-        <!-- <img class="logo-img" src="favicon.png"> Vendas <span>Baldez</span> -->
-
+      <!-- LOGO -->
+      <a href="#home" class="logo">
+        <div class="logo-container">
+          <i class="fas fa-cheese logo-icon"></i>
+          <div class="logo-text">
+            <span class="logo-main">Vendas</span>
+            <span class="logo-secondary">Baldez</span>
+          </div>
+        </div>
       </a>
-      <!--MENU-->
+      
+      <!-- MENU -->
       <div class="menu">
         <ul class="grid">
-          <li><a class="title" href="#home">Início</a></li>
-          <li><a class="title" href="#cheeses">Queijos</a></li>
-
-          <li><a class="title" href="#candy">Doces</a></li>
-
-          <li><a class="title" href="#miscellaneous">Variados</a></li>
-
-          <li><a class="title" href="#frozen">Congelados</a></li>
-
-          <li><a class="title" href="#drinks">Bebidas</a></li>
-
-          <li><a class="title" href="#services">Serviços</a></li>
-          <li><a class="title" href="#testimonials">Depoimentos</a></li>
-          <li><a class="title" href="#contact">Contato</a></li>
+          <li><a class="nav-link" href="#home">Início</a></li>
+          <li><a class="nav-link" href="#cheeses">Queijos</a></li>
+          <li><a class="nav-link" href="#candy">Doces</a></li>
+          <li><a class="nav-link" href="#miscellaneous">Variados</a></li>
+          <li><a class="nav-link" href="#frozen">Congelados</a></li>
+          <li><a class="nav-link" href="#drinks">Bebidas</a></li>
+          <li><a class="nav-link" href="#services">Serviços</a></li>
+          <li><a class="nav-link" href="#testimonials">Depoimentos</a></li>
+          <li><a class="nav-link" href="#contact">Contato</a></li>
         </ul>
       </div>
-      <!-- END OF MENU/ FIM DO MENU-->
-      <div class="toggle icon-menu"></div>
-      <div class="toggle icon-close"></div>
+      
+      <!-- MENU MOBILE -->
+      <div class="toggle">
+        <i class="fas fa-bars icon-menu"></i>
+        <i class="fas fa-times icon-close"></i>
+      </div>
     </nav>
   </header>
-  <!--MAIN SECTION/ SEÇÃO PRINCIPAL-->
+
   <main>
-    <section class="section" id="home">
+    <!-- HOME SECTION -->
+    <section class="section home" id="home">
       <div class="container grid">
-        <div class="image">
-          <img
-            src="https://media.istockphoto.com/photos/different-types-of-cheese-bread-and-tomatoes-picture-id120990404?b=1&k=20&m=120990404&s=170667a&w=0&h=2JuOaa1RB2ThgkXX2JgTvozF3Oeofzy1vVdZqvsgzEc="
-            alt="Variedade de queijos" />
+        <div class="home-image">
+          <img src="https://images.pexels.com/photos/28575893/pexels-photo-28575893.jpeg" 
+               alt="Variedade de queijos e produtos mineiros" />
         </div>
-        <div class="text">
-          <h2 class="title">Bem-vindo à Vendas Baldez - trazendo um pedacinho de Minas Gerais diretamente para a sua
-            casa!</h2>
-          <p>Descubra a autêntica variedade de queijos que selecionamos especialmente para você. Nossos queijos são
-            cuidadosamente produzidos em Minas Gerais, conhecida por sua tradição e expertise na arte da queijaria. Aqui
-            você encontrará Queijo Fresco, Meia Cura, Canastra, Provolone, Mussarela, Parmesão, Requeijão e Manteiga,
-            entre outros.</p>
-          <a href="https://api.whatsapp.com/send?phone=+5511980244279&text=Oi! Gostaria de mais informações" target="_blank" class="button">Entre em contato</a>
-        </div>
-      </div>
-    </section>
-    <div class="divider-1"></div>
-    <!--ABOUT SECTION/ SEÇÃO SOBRE-->
-    <section class="section" id="cheeses">
-      <div class="container grid">
-        <div class="image">
-          <img class="product-img" loading="lazy" src="./img/queijos.jpg" alt="" />
-        </div>
-        <div class="text">
-          <h2 class="title">Queijos</h2>
-          <p>
-            Descubra nossa incrível seleção de queijos frescos e deliciosos, disponíveis para entrega imediata. Nossa
-            extensa variedade inclui opções como Queijo Fresco, Meia Cura, Canastra, Provolone, Mussarela e Parmesão.
-            Combinando qualidade excepcional e sabores irresistíveis, nossos queijos são perfeitos para todos os gostos
-            e ocasiões. Não perca a oportunidade de saborear essas iguarias incríveis - faça seu pedido hoje mesmo e
-            desfrute de uma experiência gastronômica única!
+        <div class="home-content">
+          <h1 class="home-title">Bem-vindo à <span class="highlight">Vendas Baldez</span></h1>
+          <p class="home-subtitle">Trazendo um pedacinho de Minas Gerais diretamente para a sua casa!</p>
+          <p class="home-description">
+            Descubra a autêntica variedade de queijos que selecionamos especialmente para você. Nossos queijos são cuidadosamente produzidos em Minas Gerais, conhecida por sua tradição e expertise na arte da queijaria.
           </p>
-          <br>
-          <p>
-            Descubra nossos Kits de Provolone exclusivos, perfeitos para os amantes desse queijo irresistível.
-            Oferecemos uma variedade de opções, incluindo Provolone defumado, temperado, ao vinho e o tradicional. Além
-            disso, temos kits que vêm acompanhados de salame, criando uma combinação perfeita de sabores. Esses kits são
-            ideais para presentear alguém especial ou para desfrutar em momentos de descontração com amigos e
-            familiares. Não perca a chance de experimentar essas delícias - faça seu pedido hoje mesmo e desfrute de uma
-            experiência gourmet excepcional!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-2"></div>
-
-    <section class="section" id="candy">
-      <div class="container grid">
-        <div class="image">
-          <img class="product-img" loading="lazy" src="./img/doces.jpg" alt="" />
-        </div>
-        <div class="text">
-          <h2 class="title">Doces</h2>
-          <p>
-            Descubra nossa seleção de doces irresistíveis, perfeitos para adoçar o seu dia. Temos uma variedade de
-            opções deliciosas, incluindo a famosa Cocada na Kenga, Biscoitos Achocolatados, Goiabada Cascão, Doces de
-            Leite, Mel e Bananinha Cristalizada.
-          </p>
-          <br>
-          <p></p>
-          Cada mordida é uma explosão de sabor e prazer, feita com ingredientes de alta qualidade e preparada com
-          cuidado artesanal. Esses doces são ideais para desfrutar como sobremesa, presentear alguém especial ou
-          simplesmente para um momento de indulgência pessoal. Faça seu pedido hoje mesmo e delicie-se com essas
-          tentações doces que vão alegrar o seu paladar!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-1"></div>
-
-    <section class="section" id="miscellaneous">
-      <div class="container grid">
-        <div class="image">
-          <img class="product-img" loading="lazy" src="./img/variados.jpg" alt="" />
-        </div>
-        <div class="text">
-          <h2 class="title">Variados</h2>
-          <p>
-            Experimente o sabor autêntico do nosso Salame defumado, preparado com maestria e ingredientes de qualidade
-            superior. Cada fatia oferece um equilíbrio perfeito de sabores e texturas.
-
-            Além disso, temos opções irresistíveis como o Requeijão cremoso e a Manteiga de dar água na boca. Seja para
-            o café da manhã, lanches ou receitas especiais, esses produtos trazem um toque de indulgência ao seu dia.
-          </p>
-          <br>
-          <p>
-            Para os amantes de queijo, o nosso Provolone Desidratado é uma verdadeira tentação. Com seu sabor intenso e
-            crocância envolvente, é o petisco perfeito para qualquer ocasião.
-          </p>
-          <br>
-          <p>
-            E para aqueles que apreciam uma explosão de sabor, oferecemos a deliciosa Pururuca. Crocante e irresistível,
-            é o acompanhamento ideal para complementar seus pratos favoritos.
-
-            Cada produto em nossa seleção é cuidadosamente escolhido para garantir a mais alta qualidade e proporcionar
-            uma experiência gastronômica excepcional.
-
-            Não perca tempo e adicione essas delícias ao seu carrinho de compras hoje mesmo. Surpreenda-se com a
-            excelência e o sabor dos nossos produtos gourmet!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-2"></div>
-
-    <section class="section" id="frozen">
-      <div class="container grid">
-        <div class="image">
-          <img class="product-img" loading="lazy" src="img/congelados.jpg" alt="" />
-        </div>
-        <div class="text">
-          <h2 class="title">Congelados</h2>
-          <p>
-            Experimente nossas empadas caseiras com sabores irresistíveis: palmito, frango, frango com catupiry e
-            calabresa com catupiry. Cada mordida é uma explosão de sabores autênticos e uma experiência gastronômica
-            reconfortante.
-
-            Não deixe de experimentar nosso famoso pão de queijo, perfeito para café da manhã ou lanches. Temos o
-            tradicional e recheado com frango, requeijão e calabresa. Esses pãezinhos de queijo são irresistíveis a
-            qualquer hora do dia.
-
-
-          </p>
-          <br>
-          <p>
-            Nossos produtos congelados são preparados com ingredientes frescos e selecionados, garantindo qualidade e
-            sabor. A praticidade de tê-los à mão é ideal para momentos rápidos e deliciosos.
-
-            Adicione essas maravilhas congeladas ao seu carrinho de compras e desfrute de uma experiência gastronômica
-            única!
-
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-1"></div>
-
-    <section class="section" id="drinks">
-      <div class="container grid">
-        <div class="image">
-          <img class="product-img" loading="lazy" src="./img/bebidas.jpg" alt="" />
-        </div>
-        <div class="text">
-          <h2 class="title">Bebidas</h2>
-          <p>
-            Experimente nossa Cachaça Artesanal em variedades como Ambulância, Prata e Carvalho, cada uma com características e sabores únicos. Também temos a Cachaça de banana, que traz um toque tropical surpreendente.
-
-            Para sabores diferenciados, oferecemos a Cachaça de vários sabores, como Coco, Bananinha, Rapadura, Pequi, Pimenta Mexicana, Mel, Abacaxi, Açaí, Café, Cravo e Canela, Jabuticaba e Milho Verde. Cada opção proporciona uma experiência sensorial única e deliciosa.
-          </p>
-          <br>
-          <p>
-            Não deixe de explorar nossos Licores Artesanais, como Amarula, Coco, Maracujá e Pamonha, e os Licores Cremosos, como Amarula, Cappuccino, Sonho de Valsa, Prestígio, Banana com Canela, Pina Colada, Maracujá e Leite Condensado. Esses licores são indulgentes e perfeitos para momentos de relaxamento.
-            
-            Cada bebida em nossa coleção é cuidadosamente produzida com ingredientes selecionados, garantindo qualidade e sabor excepcionais.
-            
-            Adicione essas preciosidades à sua escolha e desfrute de uma experiência inesquecível. Faça seu pedido hoje mesmo e brinde aos momentos especiais com nossas bebidas artesanais!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-2"></div>
-
-
-    <!--SERVICES SECTION/ SEÇÃO SERVIÇOS-->
-    <section class="section" id="services">
-      <div class="container grid">
-        <header>
-          <h2 class="title">Serviços</h2>
-          <p class="subtitle">
-            Com mais de 5 anos de experiência, <strong>VendasBaldez</strong>  é reconhecida por oferecer produtos frescos e de alta qualidade. Nosso compromisso é garantir a satisfação dos clientes, proporcionando uma experiência de compra confiável e conveniente.            
-          </p>
-          <br>
-          <p class="subtitle">
-            Valorizamos cada cliente e buscamos oferecer uma experiência de compra excepcional, do pedido à entrega. A confiança que você deposita em nós nos motiva a continuar oferecendo produtos frescos e de qualidade.
-          </p>
-        </header>
-        <div class="cards grid">
-          <div class="card">
-            <i class="icon-online"></i>
-            <h3 class="title">Pedido online</h3>
-            <p>
-              Desfrute da comodidade de fazer suas compras sem sair de casa. Faça seu pedido online e tenha acesso aos melhores produtos com apenas alguns cliques.
-            </p>
+          <div class="home-features">
+            <div class="feature">
+              <i class="fas fa-truck"></i>
+              <span>Entrega em São Paulo</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-star"></i>
+              <span>Produtos Selecionados</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-clock"></i>
+              <span>Pronta Entrega</span>
+            </div>
           </div>
-          <div class="card">
-            <i class="icon-security"></i>
-            <h3 class="title">O melhor de Minas na sua casa</h3>
-         
-<p>
-Não saia de casa para saborear as delícias de Minas Gerais. Agora, você pode ter o melhor da culinária mineira no conforto do seu lar.
-            </p>
-          </div>
-          <div class="card">
-            <i class="icon-add-to-cart"></i>
-            <h3 class="title">Opção de retirada</h3>
-            <p>
-            Se você está com um tempinho livre e deseja retirar os produtos pessoalmente, temos a opção de retirada!
-            </p>
-          </div>
+          <a href="https://www.google.com" 
+             target="_blank" class="button button-primary" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Fazer Pedido Agora
+          </a>
         </div>
       </div>
     </section>
 
-    <div class="divider-1"></div>
-
-    <!--TESTIMONIALS SECTION/ SEÇÃO DEPOIMENTOS-->
-    <section class="section" id="testimonials">
+    <!-- CATEGORIES SECTION -->
+    <section class="section categories">
       <div class="container">
-        <header>
-          <h2 class="title">Depoimentos de quem já comprou com a gente</h2>
-        </header>
-        <div class="testimonials swiper">
-          <div class="swiper-wrapper">
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  muito bom ,todos são ótimo ! &#x1F603; <br /><br />
-                  Ótima comida
-                </p>
-              </blockquote>
+        <div class="section-header">
+          <h2 class="section-title">Nossas <span class="highlight">Categorias</span></h2>
+          <p class="section-subtitle">Descubra a melhor seleção de produtos mineiros</p>
+        </div>
+        
+        <div class="categories-grid">
+          <a href="#cheeses" class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-cheese"></i>
             </div>
-
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Tudo uma delícia e fresquinho, adoro os doces e os queijos
-                  nozinho e trança temperados😋😋😋😋 super indico
-                </p>
-              </blockquote>
+            <h3>Queijos</h3>
+            <p>Fresco, Meia Cura, Canastra e muito mais</p>
+          </a>
+          
+          <a href="#candy" class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-candy-cane"></i>
             </div>
-
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  tudo fresquinho e uma delícia.<br />
-                  queijo bolinha delicioso &#x1F60D; <br />
-                  super recomendo &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;
-                </p>
-              </blockquote>
+            <h3>Doces</h3>
+            <p>Doces de leite, goiabada e bananinha</p>
+          </a>
+          
+          <a href="#miscellaneous" class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-jar"></i>
             </div>
-
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Doce de leite maravilhoso. <br />
-                  Queijo nozinho <br />
-                  Queijo fresco
-                </p>
-              </blockquote>
+            <h3>Variados</h3>
+            <p>Salame, requeijão e manteiga</p>
+          </a>
+          
+          <a href="#frozen" class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-snowflake"></i>
             </div>
-
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Grande variedade de produtos, todos são muito gostosos (doce de leite com chocolate meu favorito ❤️), eles entregam na região também. Super recomendo
-                </p>
-              </blockquote>
+            <h3>Congelados</h3>
+            <p>Empadas e pão de queijo</p>
+          </a>
+          
+          <a href="#drinks" class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-wine-bottle"></i>
             </div>
+            <h3>Bebidas</h3>
+            <p>Cachaças e licores artesanais</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Delicioso amo queijo
-                </p>
-              </blockquote>
+    <!-- CHEESES SECTION -->
+    <section class="section product-section" id="cheeses">
+      <div class="container grid">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/4187783/pexels-photo-4187783.jpeg" 
+               alt="Variedade de queijos" />
+          <div class="product-badge">Mais Vendido</div>
+        </div>
+        <div class="product-content">
+          <h2 class="product-title">Nossos <span class="highlight">Queijos</span></h2>
+          <p class="product-description">
+            Descubra nossa incrível seleção de queijos frescos e deliciosos, disponíveis para entrega imediata. Nossa extensa variedade inclui opções como Queijo Fresco, Meia Cura, Canastra, Provolone, Mussarela e Parmesão.
+          </p>
+          
+          <div class="product-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>100% Minas Gerais</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Feito artesanalmente</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Entrega fresca</span>
             </div>
           </div>
-
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-2"></div>
-
-    <!--CONTACT/ CONTATO-->
-    <section class="section" id="contact">
-      <div class="container grid">
-        <div class="text">
-          <h2 class="title">Entre em contato com a gente!</h2>
-          <p>
-            Estamos aqui para ajudar você. Entre em contato com a <strong>VendasBaldez</strong> para realizar pedidos, tirar dúvidas, compartilhar críticas e sugestões. Sua opinião é muito importante para nós!
+          
+          <p class="product-highlight">
+            <strong>Kits Especiais:</strong> Provolone defumado, temperado, ao vinho e tradicional, muitos acompanhados de salame para presentear ou desfrutar.
           </p>
-          <a href="https://api.whatsapp.com/send?phone=+5511980244279&text=Oi! Gostaria de mais informações"
-            class="button" target="_blank"><i class="icon-whatsapp"></i> Entrar em contato</a>
-        </div>
-
-        <div class="links">
-          <ul class="grid">
-            <li><i class="icon-phone"></i> 11 98024-4279</li>
-            <li><i class="icon-map-pin"></i> Lauzane Paulista (Zona norte) - São Paulo </li>
-
-          </ul>
+          
+          <a href="https://www.google.com" rel="noopener"
+             target="_blank" class="button button-secondary">
+            <i class="fas fa-shopping-cart"></i> Pedir Queijos
+          </a>
         </div>
       </div>
     </section>
 
-    <div class="divider-1"></div>
+    <!-- CANDY SECTION -->
+    <section class="section product-section alt" id="candy">
+      <div class="container grid">
+        <div class="product-content">
+          <h2 class="product-title">Doces <span class="highlight">Mineiros</span></h2>
+          <p class="product-description">
+            Descubra nossa seleção de doces irresistíveis, perfeitos para adoçar o seu dia. Temos uma variedade de opções deliciosas, incluindo a famosa Cocada na Kenga, Biscoitos Achocolatados, Goiabada Cascão, Doces de Leite, Mel e Bananinha Cristalizada.
+          </p>
+          
+          <ul class="product-list">
+            <li><i class="fas fa-candy-cane"></i> Cocada na Kenga</li>
+            <li><i class="fas fa-cookie"></i> Biscoitos Achocolatados</li>
+            <li><i class="fas fa-apple-alt"></i> Goiabada Cascão</li>
+            <li><i class="fas fa-jar"></i> Doce de Leite</li>
+            <li><i class="fas fa-bee"></i> Mel</li>
+            <li><i class="fas fa-banana"></i> Bananinha Cristalizada</li>
+          </ul>
+          
+          <a href="https://www.google.com" rel="noopener"
+             target="_blank" class="button button-primary">
+            <i class="fas fa-heart"></i> Pedir Doces
+          </a>
+        </div>
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/9620120/pexels-photo-9620120.jpeg" 
+               alt="Doces mineiros" />
+        </div>
+      </div>
+    </section>
+
+    <!-- MISCELLANEOUS SECTION -->
+    <section class="section product-section" id="miscellaneous">
+      <div class="container grid">
+        <div class="product-image">
+          <img src="https://images.pexels.com/photos/28881693/pexels-photo-28881693.jpeg" 
+               alt="Produtos variados" />
+        </div>
+        <div class="product-content">
+          <h2 class="product-title">Produtos <span class="highlight">Variados</span></h2>
+          <p class="product-description">
+            Experimente o sabor autêntico do nosso Salame defumado, preparado com maestria e ingredientes de qualidade superior. Cada fatia oferece um equilíbrio perfeito de sabores e texturas.
+          </p>
+          
+          <div class="product-grid">
+            <div class="product-item">
+              <i class="fas fa-bacon"></i>
+              <h4>Salame Defumado</h4>
+              <p>Sabor autêntico e textura perfeita</p>
+            </div>
+            <div class="product-item">
+              <i class="fas fa-cheese"></i>
+              <h4>Requeijão Cremoso</h4>
+              <p>Cremoso e irresistível</p>
+            </div>
+            <div class="product-item">
+              <i class="fas fa-bread-slice"></i>
+              <h4>Manteiga</h4>
+              <p>Pura e saborosa</p>
+            </div>
+            <div class="product-item">
+              <i class="fas fa-cheese"></i>
+              <h4>Provolone Desidratado</h4>
+              <p>Sabor intenso e crocante</p>
+            </div>
+          </div>
+          
+          <a href="https://www.google.com" rel="noopener"
+             target="_blank" class="button button-secondary">
+            <i class="fas fa-store"></i> Ver Variados
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FROZEN SECTION -->
+    <section class="section product-section alt" id="frozen">
+      <div class="container grid">
+        <div class="product-content">
+          <h2 class="product-title">Produtos <span class="highlight">Congelados</span></h2>
+          <p class="product-description">
+            Experimente nossas empadas caseiras com sabores irresistíveis: palmito, frango, frango com catupiry e calabresa com catupiry. Cada mordida é uma explosão de sabores autênticos e uma experiência gastronômica reconfortante.
+          </p>
+          
+          <div class="flavor-grid">
+            <div class="flavor-card">
+              <h4>Empadas</h4>
+              <ul>
+                <li>Palmito</li>
+                <li>Frango</li>
+                <li>Frango com Catupiry</li>
+                <li>Calabresa com Catupiry</li>
+              </ul>
+            </div>
+            <div class="flavor-card">
+              <h4>Pão de Queijo</h4>
+              <ul>
+                <li>Tradicional</li>
+                <li>Recheado com Frango</li>
+                <li>Recheado com Requeijão</li>
+                <li>Recheado com Calabresa</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://google.com" rel="noopener"
+             target="_blank" class="button button-primary">
+            <i class="fas fa-snowflake"></i> Pedir Congelados
+          </a>
+        </div>
+        <div class="product-image">
+          <img src="https://plus.unsplash.com/premium_photo-1693086421089-847b0a2724f8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+               alt="Produtos congelados" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DRINKS SECTION -->
+    <section class="section product-section" id="drinks">
+      <div class="container grid">
+        <div class="product-image">
+          <img src="https://cdn.pixabay.com/photo/2014/01/29/17/49/bottle-254515_1280.jpg" 
+               alt="Bebidas artesanais" />
+        </div>
+        <div class="product-content">
+          <h2 class="product-title">Bebidas <span class="highlight">Artesanais</span></h2>
+          <p class="product-description">
+            Experimente nossa Cachaça Artesanal em variedades como Ambulância, Prata e Carvalho, cada uma com características e sabores únicos. Também temos a Cachaça de banana, que traz um toque tropical surpreendente.
+          </p>
+          
+          <div class="drinks-categories">
+            <div class="drink-category">
+              <h4><i class="fas fa-wine-glass-alt"></i> Cachaças</h4>
+              <div class="drink-tags">
+                <span>Ambulância</span>
+                <span>Prata</span>
+                <span>Carvalho</span>
+                <span>Banana</span>
+              </div>
+            </div>
+            
+            <div class="drink-category">
+              <h4><i class="fas fa-glass-whiskey"></i> Sabores Especiais</h4>
+              <div class="drink-tags">
+                <span>Coco</span>
+                <span>Rapadura</span>
+                <span>Pequi</span>
+                <span>Pimenta</span>
+                <span>Mel</span>
+                <span>Abacaxi</span>
+                <span>Açaí</span>
+                <span>Café</span>
+              </div>
+            </div>
+            
+            <div class="drink-category">
+              <h4><i class="fas fa-cocktail"></i> Licores Artesanais</h4>
+              <div class="drink-tags">
+                <span>Amarula</span>
+                <span>Coco</span>
+                <span>Maracujá</span>
+                <span>Pamonha</span>
+                <span>Cappuccino</span>
+                <span>Pina Colada</span>
+              </div>
+            </div>
+          </div>
+          
+          <a href="https://www.google.com" rel="noopener"
+             target="_blank" class="button button-secondary">
+            <i class="fas fa-wine-bottle"></i> Ver Bebidas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nossos <span class="highlight">Serviços</span></h2>
+          <p class="section-subtitle">
+            Com mais de 5 anos de experiência, <strong>Vendas Baldez</strong> é reconhecida por oferecer produtos frescos e de alta qualidade.
+          </p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3>Pedido Online</h3>
+            <p>Faça seu pedido online com facilidade e tenha os melhores produtos mineiros entregues na sua casa.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Entrega em Casa</h3>
+            <p>Receba o melhor de Minas Gerais no conforto do seu lar, com entrega rápida e segura em São Paulo.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <h3>Retirada no Local</h3>
+            <p>Prefere retirar pessoalmente? Temos opção de retirada para sua maior comodidade.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-gift"></i>
+            </div>
+            <h3>Kits Presente</h3>
+            <p>Presenteie com nossos kits especiais de queijos, salames e bebidas artesanais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">O que nossos <span class="highlight">clientes</span> dizem</h2>
+          <p class="section-subtitle">Depoimentos de quem já experimentou nossas delícias</p>
+        </div>
+        
+        <div class="testimonials-container">
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Muito bom, todos são ótimos! Ótima comida. Sempre fresquinho e com qualidade excepcional."
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-info">
+                      <h4>Maria Silva</h4>
+                      <span>Cliente há 2 anos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Tudo uma delícia e fresquinho, adoro os doces e os queijos nozinho e trança temperados 😋 Super indico!"
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-info">
+                      <h4>João Santos</h4>
+                      <span>Cliente há 1 ano</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Doce de leite maravilhoso e queijo fresco de qualidade. Grande variedade de produtos, todos muito gostosos!"
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-info">
+                      <h4>Ana Oliveira</h4>
+                      <span>Cliente há 3 anos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Delicioso! Amo queijo e aqui encontro os melhores. Entrega rápida e atendimento excelente."
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-info">
+                      <h4>Carlos Mendes</h4>
+                      <span>Cliente há 6 meses</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+      <div class="container grid">
+        <div class="contact-content">
+          <div class="section-header">
+            <h2 class="section-title">Entre em <span class="highlight">contato</span></h2>
+            <p class="section-subtitle">Estamos aqui para ajudar você com suas encomendas!</p>
+          </div>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-details">
+                <h3>WhatsApp</h3>
+                <p>(11) 7070-7070</p>
+                <a href="https://www.google.com" rel="noopener"
+                   target="_blank" class="contact-link">Enviar mensagem</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Localização</h3>
+                <p>Lauzane Paulista (Zona norte)</p>
+                <p>São Paulo - SP</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Horário de Atendimento</h3>
+                <p>Segunda a Sábado</p>
+                <p>8h às 20h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Envie sua mensagem</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Seu telefone" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button button-primary">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!--FOOTER/ RODAPÉ-->
-  <footer class="section">
-    <div class="container grid">
-      <div class="brand">
-        <a href="#home" class="logo logo-alt"><img src="img/LOGOS-VENDAS.png" loading="lazy" alt="Logo Vendas Baldez"></a>
-        <p>&copy;2023 VendasBaldez - Todos os direitos reservados.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <i class="fas fa-cheese"></i>
+            <div>
+              <span class="footer-logo-main">Vendas</span>
+              <span class="footer-logo-secondary">Baldez</span>
+            </div>
+          </a>
+          <p class="footer-description">
+            Trazendo o melhor de Minas Gerais para São Paulo desde 2018.
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Links Rápidos</h3>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#cheeses">Queijos</a></li>
+            <li><a href="#candy">Doces</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h3>Redes Sociais</h3>
+          <div class="social-links">
+            <a href="https://www.google.com" target="_blank" class="social-link" rel="noopener">
+              <i class="fab fa-instagram"></i>
+              <span>@vendasbaldez</span>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="social-link" rel="noopener">
+              <i class="fab fa-facebook"></i>
+              <span>@vendasbaldez</span>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="social-link" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              <span>(11) 7070-7070</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contato</h3>
+          <p><i class="fas fa-phone"></i> (11) 7070-7070</p>
+          <p><i class="fas fa-map-marker-alt"></i> Lauzane Paulista, SP</p>
+          <p><i class="fas fa-clock"></i> Seg-Sáb: 8h-20h</p>
+        </div>
       </div>
-
-      <div class="social">
-        <a href="https://www.instagram.com/vendasbaldez/" target="_blank">
-          <i class="icon-instagram"></i> @vendasbaldez
-        </a>
-        <a href="https://www.facebook.com/vendasbaldez/" target="_blank">
-          <i class="icon-facebook"></i>
-          @vendasbaldez
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=+5511980244279&text=Oi! Gostaria de mais informações"
-      target="_blank"><i class="icon-whatsapp"></i> Entrar em contato</a>
-        </a>
-
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Vendas Baldez. Todos os direitos reservados.</p>
+        <p class="footer-credits">
+          Desenvolvido por <a href="https://www.linkedin.com/in/julia-benedicto" target="_blank" rel="noopener">Julia Benedicto</a>
+        </p>
       </div>
-      <p>Feito por <a class="link-created" href="https://www.linkedin.com/in/julia-benedicto" target="_blank">Julia Benedicto</a></p>
     </div>
   </footer>
 
-  <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+  <!-- BACK TO TOP -->
+  <a href="#home" class="back-to-top" title="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
-  <!-- SWIPER SCRIPT-->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- scrollreveal -->
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <!--MAIN SCRIPT-->
   <script src="main.js"></script>
 </body>
 

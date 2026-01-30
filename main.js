@@ -1,126 +1,237 @@
-/* char - string /caracteres usar '' "" ou ``
-numeros - number - 12 5 8
-verdadeiro ou falso - boolean: true or false
-DOM Document Object Model*/
+// DOM Elements
+const nav = document.querySelector('#header nav');
+const toggle = document.querySelector('.toggle');
+const links = document.querySelectorAll('.nav-link');
+const header = document.querySelector('#header');
+const backToTopButton = document.querySelector('.back-to-top');
+const sections = document.querySelectorAll('main section[id]');
 
-//Abre e fecha o menu quando clica no Hamburguer e no X
-const nav = document.querySelector('#header nav')
-const toggle = document.querySelectorAll('nav .toggle')
+// Initialize Swiper
+let testimonialsSwiper = null;
 
-for (const element of toggle) {
-  element.addEventListener('click', function () {
-    nav.classList.toggle('show')
-  })
+function initSwiper() {
+  if (document.querySelector('.testimonials-swiper')) {
+    testimonialsSwiper = new Swiper('.testimonials-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  }
 }
 
-//quando clica em um item no menu, fecha o menu
-const links = document.querySelectorAll('nav ul li a')
+// Toggle mobile menu
+toggle.addEventListener('click', function () {
+  nav.classList.toggle('show');
+  toggle.classList.toggle('show');
+  
+  // Toggle body scroll
+  document.body.style.overflow = nav.classList.contains('show') ? 'hidden' : '';
+});
 
-for (const link of links) {
+// Close menu when clicking on links
+links.forEach(link => {
   link.addEventListener('click', function() {
-    nav.classList.remove('show')
-  })
-}
+    nav.classList.remove('show');
+    toggle.classList.remove('show');
+    document.body.style.overflow = '';
+  });
+});
 
-/*Adds header shadow when scrolling /Adiciona sombra no header quando da scroll */
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
+// Add shadow to header on scroll
 function changeHeaderWhenScroll() {
-
-  if(window.scrollY >= navHeight) {
-    //if scroll is greater than header height/ if scroll é maior que a altura do header
-    header.classList.add('scroll')
-      } else {
-    //else scroll is smaller than header height/ else scroll é menor que a altura do header
-    header.classList.remove('scroll')
-      }
+  if(window.scrollY >= 50) {
+    header.classList.add('scroll');
+  } else {
+    header.classList.remove('scroll');
+  }
 }
 
+// Back to top button
+function backToTop() {
+  if(window.scrollY >= 300) {
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+}
 
-/* TESTIMONIAL CAROUSEL/ CARROSSEL DE DEPOIMENTOS - SLIDER SWIPER*/
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  pagination: {
-    el: '.swiper-pagination'
-  },
-  mousewheel: true,
-  keyboard: true,
-  breakpoints: { //Breakpoint 767 (tablet's)\ Ponto de quebra 767 (tablet's)
-    767: {
-      slidesPerView: 2, //How many slides will be shown\ Quantos slides serão mostrados
-      setWrapperSize: true
+// Active menu based on current section
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4;
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+
+    const checkpointStart = checkpoint >= sectionTop - 100;
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight - 100;
+
+    const menuLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
+    
+    if(menuLink && checkpointStart && checkpointEnd) {
+      menuLink.classList.add('active');
+    } else if(menuLink) {
+      menuLink.classList.remove('active');
     }
+  });
+}
+
+// ScrollReveal animations
+function initScrollReveal() {
+  if(typeof ScrollReveal !== 'undefined') {
+    const scrollReveal = ScrollReveal({
+      origin: 'top',
+      distance: '30px',
+      duration: 700,
+      reset: false
+    });
+
+    // Home section
+    scrollReveal.reveal('.home-image', { delay: 200 });
+    scrollReveal.reveal('.home-title', { delay: 300 });
+    scrollReveal.reveal('.home-subtitle', { delay: 400 });
+    scrollReveal.reveal('.home-description', { delay: 500 });
+    scrollReveal.reveal('.home-features', { delay: 600 });
+    scrollReveal.reveal('.home-content .button', { delay: 700 });
+
+    // Categories
+    scrollReveal.reveal('.category-card', { interval: 100 });
+
+    // Product sections
+    scrollReveal.reveal('.product-image', { origin: 'left' });
+    scrollReveal.reveal('.product-content', { origin: 'right' });
+
+    // Services
+    scrollReveal.reveal('.service-card', { interval: 100 });
+
+    // Contact
+    scrollReveal.reveal('.contact-content', { origin: 'left' });
+    scrollReveal.reveal('.contact-form', { origin: 'right' });
+  }
+}
+
+// Contact form handler
+function initContactForm() {
+  const contactForm = document.getElementById('contact-form');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const name = formData.get('name') || this.querySelector('input[type="text"]').value;
+      const phone = formData.get('phone') || this.querySelector('input[type="tel"]').value;
+      const message = formData.get('message') || this.querySelector('textarea').value;
+      
+      // Create WhatsApp message
+      const whatsappMessage = `Olá! Meu nome é ${name}. Telefone: ${phone}\n\nMensagem: ${message}`;
+      const whatsappURL = `https://api.whatsapp.com/send?phone=+5511980244279&text=${encodeURIComponent(whatsappMessage)}`;
+      
+      // Open WhatsApp
+      window.open(whatsappURL, '_blank');
+      
+      // Reset form
+      this.reset();
+      
+      // Show success message
+      alert('Redirecionando para o WhatsApp para enviar sua mensagem!');
+    });
+  }
+}
+
+// Smooth scroll for anchor links
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      
+      if (href === '#') return;
+      
+      e.preventDefault();
+      
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        const headerHeight = header.offsetHeight;
+        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initSwiper();
+  initScrollReveal();
+  initContactForm();
+  initSmoothScroll();
+  
+  // Set current year in footer
+  const yearSpan = document.querySelector('.footer-bottom p');
+  if (yearSpan) {
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = `© ${currentYear} Vendas Baldez. Todos os direitos reservados.`;
   }
 });
 
-/* ScrollReveal: Show elements when scrolling page/ ScrollReveal: Mostrar elementos quando der scroll na página */
-// const scrollReveal = ScrollReveal({
-//   origin: 'top',
-//   distance: '30px',
-//   duration: 700,
-//   reset: true
-// })
+// Scroll event listeners
+window.addEventListener('scroll', function() {
+  changeHeaderWhenScroll();
+  backToTop();
+  activateMenuAtCurrentSection();
+});
 
-// scrollReveal.reveal(
-//   `#home .image, #home .text,
-//   #cheeses .image, #cheeses .text,
-//   #candy .image, #candy .text,
-//   #miscellaneous .image, #miscellaneous .text,
-//   #frozen .image, #frozen .text,
-//   #drinks .image, #drinks .text,
-//   #services header, #services .card,
-//   #testimonials header, #testimonials .testimonials
-//   #contact .text, #contact .links,
-//   footer .brand, footer .social
-//   `,
-//   { interval: 200 }
-// )
-
-/* BACK TO TOP/ VOLTAR AO TOPO - SETA*/
-const backToTopButton = document.querySelector('.back-to-top') //procurar no css o botão
-
-function backToTop() {
-
-  if(window.scrollY >= 560) { //se o eixo Y 'vertical' for igual ou maior a 560
-    backToTopButton.classList.add('show') //adiciona na class do botão o show
-  } else {
-    backToTopButton.classList.remove('show')
+// Resize event listener
+window.addEventListener('resize', function() {
+  // Reinitialize Swiper on resize if needed
+  if (testimonialsSwiper) {
+    testimonialsSwiper.update();
   }
+});
 
-}
-
-/*Active menu according to the visible section on the page\ Menu ativo conforme a seção visível na página*/
-const sections = document.querySelectorAll('main section[id]')
-function activateMenuAtCurrentSection() {
-
-  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
-  for(const section of sections) {
-    const sectionTop = section.offsetTop
-    const sectionHeight = section.offsetHeight
-    const sectionId = section.getAttribute('id')
-
-    const checkpointStart = checkpoint >= sectionTop
-    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
-
-    if(checkpointStart && checkpointEnd) {
-      document
-      .querySelector('nav ul li a[href*=' + sectionId + ']')
-      .classList.add('active')
-      
-    } else {
-      document
-      .querySelector('nav ul li a[href*=' + sectionId + ']')
-      .classList.remove('active')
+// Product category click handler
+document.querySelectorAll('.category-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    
+    if (targetId && targetId.startsWith('#')) {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        const headerHeight = header.offsetHeight;
+        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
-  }
-
-}
-
-/*SCROLL FUNCTIONS/ FUNÇÕES SCROLL*/ 
-window.addEventListener('scroll', function() {  
-  changeHeaderWhenScroll()
-  backToTop()
-  activateMenuAtCurrentSection()
-})
-
+  });
+});
