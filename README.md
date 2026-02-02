@@ -1,40 +1,84 @@
-<img width="30%" src="https://github.com/juliabb/vendasbaldez/blob/main/img/LOGOS-VENDAS.png">
+🧀 Vendas Baldez
 
+Landing page institucional desenvolvida para apresentar produtos artesanais, com foco em uma experiência visual agradável, responsiva e acessível.
 
-# Vendas Baldez
+O projeto simula um site comercial para venda de queijos e doces típicos, trazendo informações sobre produtos, serviços e contato.
 
-VendasBaldez foi desenvolvido no NLW. VendasBaldez é uma página institucional no formato One Page.
+🔗 Demo online:
+👉 https://juliabb.github.io/vendasbaldez/
 
+✨ Funcionalidades
 
-## Demonstração
+Layout responsivo (desktop, tablet e mobile)
 
-Para acessar [Clique aqui](https://juliabb.github.io/vendasbaldez/)
+Navegação em página única (One Page)
 
+Seções organizadas de produtos e informações
 
-## Screenshots
+Slider/carrossel de conteúdos
 
-![App Screenshot](https://github.com/juliabb/vendasbaldez/blob/main/img/preview-Vendas-Baldez.png)
+Menu interativo
 
+Design focado em experiência do usuário (UX)
 
-## Autores
+🚀 Tecnologias Utilizadas
 
-- [@juliabb](https://www.github.com/juliabb)
+HTML5 — estrutura semântica
 
+CSS3 — estilização e responsividade
 
-## Stack utilizada
+JavaScript (Vanilla) — interatividade e comportamento da página
 
-**Front-end:** HTML, CSS, JavaScript
+Swiper.js — carrossel de slides
 
-**Bibliotecas** Google Fonts, SwipeJS
+Git & GitHub — versionamento e deploy
 
+GitHub Pages — hospedagem do projeto
 
+🧠 Aprendizados e Objetivos do Projeto
 
-## Instalação
+Este projeto foi desenvolvido como parte de um evento prático (NLW), com o objetivo de reforçar fundamentos do desenvolvimento front-end.
 
-Instale vendasbaldez com npm
+Além do conteúdo base, utilizei o projeto para:
 
-```bash
-  npm install vendasbaldez
-  cd vendasbaldez
-```
-    
+Consolidar conceitos de HTML semântico
+
+Trabalhar responsividade com CSS
+
+Praticar manipulação do DOM com JavaScript
+
+Integrar bibliotecas externas
+
+Publicar e documentar um projeto real no GitHub
+
+O foco principal foi fortalecer a base técnica e boas práticas de organização e apresentação de projetos.
+
+📂 Como executar o projeto localmente
+# Clone o repositório
+git clone https://github.com/juliabb/vendasbaldez.git
+
+# Acesse a pasta do projeto
+cd vendasbaldez
+
+# Abra o arquivo index.html no navegador
+
+📌 Próximas melhorias planejadas
+
+Organização do JavaScript em módulos
+
+Implementação de Dark Mode
+
+Validação do formulário de contato
+
+Melhorias de acessibilidade (ARIA, navegação por teclado)
+
+Animações suaves ao scroll
+
+👩‍💻 Desenvolvido por
+
+Julia Benedicto
+Front-end Developer
+
+GitHub: https://github.com/juliabb
+
+LinkedIn: https://www.linkedin.com/in/julia-benedicto/
